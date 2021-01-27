@@ -8,7 +8,9 @@
     Html.AddScriptParts(ResourceLocation.Footer, "~/js/public.accordion.js");
     Html.AddScriptParts(ResourceLocation.Footer, "~/js/public.onepagecheckout.js");
 
-    var storeLocation = webHelper.GetStoreLocation();
+
+    //Fernando Sosa: Fix for SSL
+    var storeLocation = webHelper.GetStoreLocation(useSsl: true);
 
     //title
     Html.AddTitleParts(T("PageTitle.Checkout").Text);
